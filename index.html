@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid pb-3">
+        <h1 class="display-5 fw-bold mb-3 mt-3 text-center text-body-emphasis">To-Do List</h1>
+        <div class="d-grid gap-3 mb-5" style="grid-template-columns: 1fr 1fr 1fr;">
+            <div ondrop="drop(event)" id="drop1" ondragover="allowdrop(event)" class="list-group bg-body-tertiary border rounded-3">
+                <h3 class="child fs-2 text-body-emphasis mb-4 mt-3 text-center">To-Do</h3>
+            </div>
+            
+            <div ondrop="drop(event)" id="drop2" ondragover="allowdrop(event)" class="box-height list-group bg-body-tertiary border rounded-3">
+                <h3 class="child fs-2 text-body-emphasis mb-4 mt-3 text-center">In Progress</h3>
+            </div>
+            
+            <div ondrop="drop(event)" id="drop3" ondragover="allowdrop(event)" class="box-height list-group bg-body-tertiary border rounded-3">
+                <h3 class="child fs-2 text-body-emphasis mb-4 mt-3 text-center">Done</h3>
+            </div>
+        </div>
+        
+        <div class="input-group w-25 mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">New Task</span>
+            <input type="text" id="Task" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group w-25 mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Task Description</span>
+            <input type="text" id="Description" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button onclick="addList()" type="button" class="btn btn-secondary">ADD</button>
+        <button type="button" onclick="DeleteToDo()" class="btn btn-danger">Delete To-DO List</button>
+        <button type="button" onclick="DeleteAll()" class="btn btn-danger">Delete All</button>
+        <button type="button" onclick="DeleteDone()" class="btn btn-success">Delet Done</button>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
